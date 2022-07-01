@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(40deg, #7ea9c4, #fb8aa7);
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image{
+    display: flex;
+    position: absolute;
+    top: 6%;
+    right: 3%;
+}
+
+.image img{
+    height: 170px;
+    opacity: 0.3;
+    animation: spin 8s linear infinite;
+    z-index: -1;
+}
+
+.img2{
+    height: 150px;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    opacity: 0.3;
+    animation: spin2 5s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin2{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+.eid img{
+    height: 0px;
+    z-index: 1;
+    animation: eid-mubarak 2s linear forwards;
+    animation-delay: .5s;
+}
+
+@keyframes eid-mubarak{
+    0%{
+        height: 0;
+        width: 0;
+    }
+
+    90%{
+        height: 420px;
+    }
+
+    100%{
+        height: 380px;
+    }
+}
+
+.cow{
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: -180px;
+    cursor: pointer;
+    animation: cow .5s linear forwards;
+    animation-delay: 2.7s;
+}
+
+@keyframes cow{
+    0%{
+        left: -180px;
+    }
+
+    100%{
+        left: -5px;
+    }
+}
+
+.name{
+    position: absolute;
+    bottom: 2%;
+    right: 8px;
+}
+
+.name a{
+    text-decoration: none;
+    color: #000;
+}
+
+.name h2{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.8;
+}
